@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% block title %}Policy Simulator | Governomics{% endblock %}
+
+{% block content %}
+
+<section class="simulator-page">
+
+    <div class="container">
+
+        <!-- Page Header -->
+
+        <div class="sim-top">
+
+            <p class="page-label">POLICY SIMULATOR</p>
+
+            <h1>Policy Simulator</h1>
+
+            <p class="subtitle">
+                Evaluate public policies using machine learning and macroeconomic indicators.
+            </p>
+
+        </div>
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <div class="dashboard-grid">
+
+            <!-- ================= LEFT PANEL ================= -->
+
+            <div class="dashboard-card">
+
+                <h3>Policy Configuration</h3>
+
+                <form id="simulationForm">
+
+                    <!-- Country -->
+
+                    <div class="input-group-custom">
+
+                        <label for="country">Country</label>
+
+                        <select id="country" name="country" class="sim-input">
+
+                            <option>India</option>
+                            <option>United States</option>
+                            <option>China</option>
+                            <option>Japan</option>
+                            <option>Germany</option>
+                            <option>United Kingdom</option>
+                            <option>France</option>
+                            <option>Canada</option>
+                            <option>Australia</option>
+                            <option>Brazil</option>
+                            <option>South Korea</option>
+                            <option>Singapore</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Policy -->
+
+                    <div class="input-group-custom">
+
+                        <label for="policy">Policy</label>
+
+                        <select id="policy" name="policy" class="sim-input">
+
+                            <option>Education Reform</option>
+                            <option>Healthcare Expansion</option>
+                            <option>Infrastructure Investment</option>
+                            <option>Tax Reduction</option>
+                            <option>Renewable Energy</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Budget -->
+
+                    <div class="input-group-custom">
+
+                        <div class="slider-head">
+
+                            <label for="budgetSlider">
+                                Budget (% GDP)
+                            </label>
+
+                            <span id="budgetValue">5%</span>
+
+                        </div>
+
+                        <input
+                            type="range"
+                            id="budgetSlider"
+                            name="budget"
+                            class="slider"
+                            min="1"
+                            max="100"
+                            value="5"
+                        >
+
+                    </div>
+
+                    <!-- Duration -->
+
+                    <div class="input-group-custom">
+
+                        <div class="slider-head">
+
+                            <label for="durationSlider">
+                                Duration (Years)
+                            </label>
+
+                            <span id="durationValue">10</span>
+
+                        </div>
+
+                        <input
+                            type="range"
+                            id="durationSlider"
+                            name="duration"
+                            class="slider"
+                            min="1"
+                            max="50"
+                            value="10"
+                        >
+
+                    </div>
+
+                    <button type="submit" class="simulate-btn">
+
+                        Run Simulation
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- ================= RIGHT PANEL ================= -->
+
+            <div class="dashboard-card results-panel">
+
+                <h3>Simulation Results</h3>
+
+                <div class="metrics-grid">
+
+                    <div class="metric-card">
+
+                        <p class="metric-label">
+                            Success Probability
+                        </p>
+
+                        <h2 id="successResult">--%</h2>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <p class="metric-label">
+                            GDP Impact
+                        </p>
+
+                        <h2 id="gdpResult">--%</h2>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <p class="metric-label">
+                            Employment Impact
+                        </p>
+
+                        <h2 id="employmentResult">--%</h2>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <p class="metric-label">
+                            Implementation Risk
+                        </p>
+
+                        <h2 id="riskResult">--%</h2>
+
+                    </div>
+
+                </div>
+
+                <!-- Confidence Bar -->
+
+                <div class="confidence-card">
+
+                    <div class="confidence-header">
+
+                        <span>Simulation Confidence</span>
+
+                        <span id="confidenceValue">--%</span>
+
+                    </div>
+
+                    <div class="confidence-track">
+
+                        <div
+                            id="confidenceFill"
+                            class="confidence-fill">
+                        </div>
+
+                    </div>
+
+                    <p id="confidenceText">
+
+                        Run a simulation to calculate model confidence.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= CHARTS ================= -->
+
+        <div class="dashboard-card chart-card">
+
+            <h3>Economic Projection</h3>
+
+            <<canvas id="projectionChart" height="110"></canvas>
+
+        </div>
+
+        <!-- ================= AI INSIGHTS ================= -->
+
+        <div class="dashboard-card">
+
+            <h3>AI Policy Insights</h3>
+
+            <div class="ai-insights">
+
+    <div class="insight-item">
+        <strong>Policy Assessment</strong>
+        <p id="assessmentText">
+            Run a simulation to generate AI insights.
+        </p>
+    </div>
+
+    <div class="insight-item">
+        <strong>Economic Outlook</strong>
+        <p id="economicText">
+            Waiting for prediction...
+        </p>
+    </div>
+
+    <div class="insight-item">
+        <strong>Risk Analysis</strong>
+        <p id="riskText">
+            Waiting for prediction...
+        </p>
+    </div>
+
+    <div class="insight-item">
+        <strong>Recommendation</strong>
+        <p id="recommendationText">
+            Waiting for prediction...
+        </p>
+    </div>
+
+</div>
+<div class="download-section">
+
+    <button id="downloadPDF" class="simulate-btn">
+
+        Download PDF Report
+
+    </button>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Policies | Governomics{% endblock %}
+
+{% block content %}
+
+<section class="simulator-page">
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <div class="sim-top">
+
+            <p class="page-label">POLICY COMPARISON</p>
+
+            <h1>Compare Public Policies</h1>
+
+            <p class="subtitle">
+                Compare the projected impact of two policies side by side using machine learning.
+            </p>
+
+        </div>
+
+        <!-- Country -->
+
+        <div class="dashboard-card mb-4">
+
+            <div class="input-group-custom mb-0">
+
+                <label for="compareCountry">Country</label>
+
+                <select id="compareCountry" class="sim-input">
+
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>China</option>
+                    <option>Japan</option>
+                    <option>Germany</option>
+                    <option>United Kingdom</option>
+                    <option>France</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>Brazil</option>
+                    <option>South Korea</option>
+                    <option>Singapore</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- Policy Cards -->
+
+        <div class="compare-grid">
+
+            <!-- LEFT -->
+
+            <div class="dashboard-card">
+
+                <h3>Policy A</h3>
+
+               <form id="policyAForm">
+
+    <div class="input-group-custom">
+
+        <label>Policy</label>
+
+        <select class="sim-input" id="policyA">
+
+            <option>Education Reform</option>
+            <option>Healthcare Expansion</option>
+            <option>Infrastructure Investment</option>
+            <option>Tax Reduction</option>
+            <option>Renewable Energy</option>
+
+        </select>
+
+    </div>
+
+    <div class="input-group-custom">
+
+        <div class="slider-head">
+
+            <label>Budget (% GDP)</label>
+
+            <span id="budgetAValue">5%</span>
+
+        </div>
+
+        <input
+            type="range"
+            id="budgetA"
+            class="slider"
+            min="1"
+            max="100"
+            value="5">
+
+    </div>
+
+    <div class="input-group-custom">
+
+        <div class="slider-head">
+
+            <label>Duration (Years)</label>
+
+            <span id="durationAValue">10</span>
+
+        </div>
+
+        <input
+            type="range"
+            id="durationA"
+            class="slider"
+            min="1"
+            max="50"
+            value="10">
+
+    </div>
+
+    <button class="simulate-btn">
+
+        Simulate Policy A
+
+    </button>
+
+</form>
+            </div>
+
+            <!-- VS -->
+
+            <div class="vs-box">
+
+                <span>VS</span>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="dashboard-card">
+
+                <h3>Policy B</h3>
+
+                <form id="policyBForm">
+
+    <div class="input-group-custom">
+
+        <label>Policy</label>
+
+        <select class="sim-input" id="policyB">
+
+            <option>Education Reform</option>
+            <option>Healthcare Expansion</option>
+            <option>Infrastructure Investment</option>
+            <option>Tax Reduction</option>
+            <option>Renewable Energy</option>
+
+        </select>
+
+    </div>
+
+    <div class="input-group-custom">
+
+        <div class="slider-head">
+
+            <label>Budget (% GDP)</label>
+
+            <span id="budgetBValue">5%</span>
+
+        </div>
+
+        <input
+            type="range"
+            id="budgetB"
+            class="slider"
+            min="1"
+            max="100"
+            value="5">
+
+    </div>
+
+    <div class="input-group-custom">
+
+        <div class="slider-head">
+
+            <label>Duration (Years)</label>
+
+            <span id="durationBValue">10</span>
+
+        </div>
+
+        <input
+            type="range"
+            id="durationB"
+            class="slider"
+            min="1"
+            max="50"
+            value="10">
+
+    </div>
+
+    <button class="simulate-btn">
+
+        Simulate Policy B
+
+    </button>
+
+</form>
+
+            </div>
+
+        </div>
+
+        <!-- Results -->
+
+        <div class="dashboard-card mt-4">
+
+            <h3>Comparison Results</h3>
+
+            <div class="comparison-table">
+
+    <div class="table-header">
+
+        <div>Metric</div>
+        <div>Policy A</div>
+        <div>Policy B</div>
+        <div>Winner</div>
+
+    </div>
+
+    <div class="table-row">
+
+        <div>Success Probability</div>
+
+        <div id="aSuccess">--%</div>
+
+        <div id="bSuccess">--%</div>
+
+        <div id="winnerSuccess">—</div>
+
+    </div>
+
+    <div class="table-row">
+
+        <div>GDP Impact</div>
+
+        <div id="aGDP">--%</div>
+
+        <div id="bGDP">--%</div>
+
+        <div id="winnerGDP">—</div>
+
+    </div>
+
+    <div class="table-row">
+
+        <div>Employment Impact</div>
+
+        <div id="aEmployment">--%</div>
+
+        <div id="bEmployment">--%</div>
+
+        <div id="winnerEmployment">—</div>
+
+    </div>
+
+    <div class="table-row">
+
+        <div>Implementation Risk</div>
+
+        <div id="aRisk">--%</div>
+
+        <div id="bRisk">--%</div>
+
+        <div id="winnerRisk">—</div>
+
+    </div>
+
+</div>
+
+        </div>
+
+        <!-- Winner -->
+
+        <div class="dashboard-card">
+
+            <h3>Recommendation</h3>
+
+            <div class="recommendation-box">
+
+    <h2 id="overallWinner">
+
+        Compare two policies to begin.
+
+    </h2>
+
+    <p id="recommendationText">
+
+        Run simulations for both policies to receive an AI-generated recommendation.
+
+    </p>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

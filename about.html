@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block title %}About | Governomics{% endblock %}
+
+{% block content %}
+
+<section class="simulator-page">
+
+<div class="container">
+
+<div class="sim-top">
+
+<p class="page-label">ABOUT GOVERNOMICS</p>
+
+<h1>Building Better Public Policy with AI</h1>
+
+<p class="subtitle">
+
+Governomics combines machine learning and macroeconomic indicators
+to simulate the possible impact of public policies before implementation.
+
+</p>
+
+</div>
+
+<!-- Mission -->
+
+<div class="dashboard-card mb-4">
+
+<h2>Our Mission</h2>
+
+<p>
+
+Governomics aims to assist policymakers, researchers and students by
+providing an AI-powered platform that estimates the potential outcomes
+of public policies using economic indicators and machine learning.
+
+Instead of relying only on intuition, users can compare multiple
+policies and make more informed decisions.
+
+</p>
+
+</div>
+
+<!-- Workflow -->
+
+<div class="dashboard-card mb-4">
+
+<h2>How Governomics Works</h2>
+
+<div class="comparison-table">
+
+<div class="table-row">
+
+<div><strong>1.</strong></div>
+
+<div>Select Country</div>
+
+<div>Choose Policy</div>
+
+<div>Configure Budget & Duration</div>
+
+</div>
+
+<div class="table-row">
+
+<div><strong>2.</strong></div>
+
+<div>Economic Indicators</div>
+
+<div>ML Prediction</div>
+
+<div>Policy Evaluation</div>
+
+</div>
+
+<div class="table-row">
+
+<div><strong>3.</strong></div>
+
+<div>Results</div>
+
+<div>Charts</div>
+
+<div>AI Insights</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ML Pipeline -->
+
+<div class="dashboard-card mb-4">
+
+<div class="dashboard-card mb-4">
+
+    <h2>Machine Learning Pipeline</h2>
+
+    <div class="ml-pipeline">
+
+        <div class="pipeline-step">
+
+            <div class="pipeline-icon">1</div>
+
+            <h4>Dataset</h4>
+
+            <p>
+                Synthetic dataset generated using realistic
+                macroeconomic indicators and policy scenarios.
+            </p>
+
+        </div>
+
+        <div class="pipeline-arrow">
+
+            ↓
+
+        </div>
+
+        <div class="pipeline-step">
+
+            <div class="pipeline-icon">2</div>
+
+            <h4>Feature Engineering</h4>
+
+            <p>
+                Numerical features standardized and policy
+                categories one-hot encoded for model training.
+            </p>
+
+        </div>
+
+        <div class="pipeline-arrow">
+
+            ↓
+
+        </div>
+
+        <div class="pipeline-step">
+
+            <div class="pipeline-icon">3</div>
+
+            <h4>Random Forest Models</h4>
+
+            <p>
+
+                Four independent models trained to predict
+                policy success, GDP impact,
+                employment impact and implementation risk.
+
+            </p>
+
+        </div>
+
+        <div class="pipeline-arrow">
+
+            ↓
+
+        </div>
+
+        <div class="pipeline-step">
+
+            <div class="pipeline-icon">4</div>
+
+            <h4>Predictions</h4>
+
+            <p>
+
+                The trained models generate predictions which
+                are displayed with charts, AI insights
+                and downloadable reports.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- Models -->
+
+<div class="dashboard-card mb-4">
+
+<h2>Prediction Models</h2>
+
+<div class="metrics-grid">
+
+<div class="metric-card">
+
+<p class="metric-label">Model 1</p>
+
+<h4>Success Probability</h4>
+
+</div>
+
+<div class="metric-card">
+
+<p class="metric-label">Model 2</p>
+
+<h4>GDP Impact</h4>
+
+</div>
+
+<div class="metric-card">
+
+<p class="metric-label">Model 3</p>
+
+<h4>Employment Impact</h4>
+
+</div>
+
+<div class="metric-card">
+
+<p class="metric-label">Model 4</p>
+
+<h4>Implementation Risk</h4>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Tech -->
+
+<div class="dashboard-card mb-4">
+
+<h2>Technology Stack</h2>
+
+<div class="tech-stack">
+
+<span>Python</span>
+
+<span>Flask</span>
+
+<span>Scikit-Learn</span>
+
+<span>Pandas</span>
+
+<span>Joblib</span>
+
+<span>Bootstrap</span>
+
+<span>HTML</span>
+
+<span>CSS</span>
+
+<span>JavaScript</span>
+
+</div>
+
+</div>
+
+<!-- Disclaimer -->
+
+<div class="dashboard-card">
+
+<h2>Disclaimer</h2>
+
+<p>
+
+Governomics is an educational machine learning project.
+Predictions are generated using trained Random Forest models on a
+synthetic dataset and should be interpreted as simulations rather
+than real-world government forecasts.
+
+</p>
+
+</div>
+<div class="problem-preview text-center" data-aos="fade-up">
+
+    <!-- IMAGE INSERT HERE -->
+
+    <br><br><br><br>
+    <img src="{{ url_for('static', filename='image/photo2.png') }}"
+         class="img-fluid dashboard-preview"
+         alt="Governomics Dashboard"
+         style="width:900px; height:auto;">
+
+
+</div>
+</div>
+
+</section>
+<footer class="footer footer-about">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- Left -->
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+
+                    <img src="{{ url_for('static', filename='image/logo.png') }}"
+                        height="60" width="75"
+                        alt="Governomics">
+
+                    <h3>Governomics</h3>
+
+                </div>
+
+                <p>
+
+                    AI-powered public policy simulation platform
+                    helping governments and researchers evaluate
+                    policies before implementation.
+
+                </p>
+
+            </div>
+
+            <!-- Center -->
+
+            <div class="col-lg-3">
+
+                <h5>Navigation</h5>
+
+                <ul>
+
+                    <li><a href="/">Home</a></li>
+
+                    <li><a href="/simulator">Simulator</a></li>
+
+                    <li><a href="/compare">Compare Policies</a></li>
+
+                    <li><a href="/about">About</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="col-lg-4">
+
+                <h5>Project</h5>
+
+                <ul>
+
+                    <li>IIIT Nagpur</li>
+
+                    <li>Machine Learning</li>
+
+                    <li>Flask + Bootstrap</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <span>© 2026 Governomics. All Rights Reserved.</span>
+
+            <span>Designed & Developed by Rudraksh Gupta</span>
+
+        </div>
+
+    </div>
+
+</footer>
+{% endblock %}
