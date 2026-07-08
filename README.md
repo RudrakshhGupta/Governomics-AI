@@ -206,12 +206,14 @@ http://127.0.0.1:5000
 
 ## Screenshots
 
-> Add screenshots of the following pages:
+- Homepage <img width="1900" height="917" alt="image" src="https://github.com/user-attachments/assets/68696630-7828-4060-b487-f33d0bbf2e27" />
 
-- Homepage
-- Policy Simulator
-- Compare Policies
-- Prediction Results
+- Policy Simulator <img width="1892" height="930" alt="image" src="https://github.com/user-attachments/assets/20a062ea-a658-4b40-ac9b-a56632e8f822" />
+
+- Compare Policies <img width="1895" height="911" alt="image" src="https://github.com/user-attachments/assets/e53bb8cf-532a-4685-8e8b-6d729fc07334" />
+
+- Prediction Results <img width="561" height="732" alt="image" src="https://github.com/user-attachments/assets/375c7340-4d39-483c-a829-efffa5323ae5" />
+
 
 ---
 
@@ -257,6 +259,7 @@ This project is licensed under the MIT License.
 This project was built using several outstanding open-source technologies, including:
 
 - Flask
+- Jsons 
 - Scikit-Learn
 - Pandas
 - NumPy
